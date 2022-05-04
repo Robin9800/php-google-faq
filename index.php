@@ -93,7 +93,7 @@
         ],
        
     ];
-
+    
     
 ?>
 
@@ -110,9 +110,10 @@
 
 <body>
     <div class="container">
-        <?php for($i = 0; $i < count($faq); $i++){
-            $singolaFaq = $faq[$i];
-            echo($singolaFaq['domanda'] . '-' . $singolaFaq['risposta']);
+        <?php 
+            for($i = 0; $i < count($faq); $i++){
+                $singolaFaq = $faq[$i];
+                echo($singolaFaq["<h2 class='question'>['domanda']</h2>"]);
             }; 
         ?>
     </div>
