@@ -111,10 +111,16 @@
 <body>
     <div class="container">
         <?php 
-            for($i = 0; $i < count($faq); $i++){
-                $singolaFaq = $faq[$i];
-                echo($singolaFaq["<h2 class='question'>['domanda']</h2>"]);
-            }; 
+             foreach ($faq as $key => $item) {
+                echo('<h2>' . $item['domanda'] . '</h2>');
+                $itemRisposta = explode('|||', $item['risposta']);
+                // echo('<pre>');
+                // var_dump($itemRisposta);
+                // echo('</pre>');
+                foreach($itemRisposta as $paragrafo){
+                    echo('<p>' . $paragrafo . '</p>');
+                }
+            }
         ?>
     </div>
     
